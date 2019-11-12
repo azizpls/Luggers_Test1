@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "477007380926",
+    "firebase_url": "https://luggerztest.firebaseio.com",
+    "project_id": "luggerztest",
+    "storage_bucket": "luggerztest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477007380926:android:ea43114883350102a779ef",
+        "android_client_info": {
+          "package_name": "com.boomsquad.luggerztest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477007380926-t82p47o4d3a493hlnv8pusbaq5kendu5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.boomsquad.luggerztest",
+            "certificate_hash": "ca58aa56a2c1030634f4f890d326475341794aeb"
+          }
+        },
+        {
+          "client_id": "477007380926-5kv1dgvocfqovu00hrm3kdb9u6rk84sr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgVL795plqUtmWKIjecxrlS16l5QuWxic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477007380926-5kv1dgvocfqovu00hrm3kdb9u6rk84sr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
