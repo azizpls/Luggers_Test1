@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: io.card:android-sdk:5.5.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-sdk-5.5.0.aar/2c3dc3c234f40ec2c88cd3066636f206/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-sdk-5.5.0.aar/2c3dc3c234f40ec2c88cd3066636f206/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0c3f8cc5076ed51476139bbeef5913a1/android-sdk-5.5.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0c3f8cc5076ed51476139bbeef5913a1/android-sdk-5.5.0/res" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.card/android-sdk/5.5.0/bdf4b036bb1d581712804c47c333620595636c37/android-sdk-5.5.0-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.card/android-sdk/5.5.0/f84374af06f1f833fc5b1d6da66027bee4966113/android-sdk-5.5.0-sources.jar!/" />
     </SOURCES>

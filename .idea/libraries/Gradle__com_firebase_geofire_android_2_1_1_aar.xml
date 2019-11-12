@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.firebase:geofire-android:2.1.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/geofire-android-2.1.1.aar/536e4ea5aaa2ffa9d233fcf5f1a1cc58/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/geofire-android-2.1.1.aar/536e4ea5aaa2ffa9d233fcf5f1a1cc58/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a974a34639ed8bbe7a58a4d0685b5406/geofire-android-2.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a974a34639ed8bbe7a58a4d0685b5406/geofire-android-2.1.1/res" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.firebase/geofire-android/2.1.1/444e908fa55e9f628d9492925989113ebe5121c9/geofire-android-2.1.1-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.firebase/geofire-android/2.1.1/c908106c69b98f9b78c474b759df53e50abae386/geofire-android-2.1.1-sources.jar!/" />
     </SOURCES>
