@@ -40,32 +40,41 @@
         android:layout_height="wrap_content"
         android:id="@+id/radioGroup"
         android:orientation="horizontal">
+
         <RadioButton
+            android:id="@+id/UberX"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="UberX"
-            android:id="@+id/UberX"/>
+            android:text="LuggerX" />
+
         <RadioButton
+            android:id="@+id/UberBlack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="UberBlack"
-            android:id="@+id/UberBlack"/>
+            android:text="LuggerXL" />
+
         <RadioButton
+            android:id="@+id/UberXl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="UberXl"
-            android:id="@+id/UberXl"/>
+            android:text="LuggerXXL" />
     </RadioGroup>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/confirm"
-        android:text="confirm"/>
+        android:text="confirm"
+        android:background="@drawable/white_button_rounded"
+        android:textColor="#1976D2"
+        />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/back"
-        android:text="back"/>
+        android:text="back"
+        android:background="@drawable/white_button_rounded"
+        android:textColor="#1976D2"
+        />
 
 </LinearLayout>

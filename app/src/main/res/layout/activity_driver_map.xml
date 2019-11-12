@@ -22,20 +22,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/logout"
-                android:text="logout"/>
+                android:text="logout"
+                android:background="@drawable/white_button_rounded"
+                android:textColor="#1976D2"
+                />
             <Button
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/history"
-                android:text="history"/>
+                android:text="history"
+                android:background="@drawable/white_button_rounded"
+                android:textColor="#1976D2"
+                />
             <Button
                 android:layout_weight="1"
                 android:layout_gravity="end"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/settings"
-                android:text="Settings"/>
+                android:text="Settings"
+                android:background="@drawable/white_button_rounded"
+                android:textColor="#1976D2"
+                />
         </LinearLayout>
         <Switch
             android:layout_width="wrap_content"
