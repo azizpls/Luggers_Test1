@@ -43,6 +43,7 @@ public class CustomerHomeActivity extends AppCompatActivity {
     private Button btnRequest;
 
     private String userID;
+    private String pStatus = "Open";
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthListener;
@@ -86,7 +87,8 @@ public class CustomerHomeActivity extends AppCompatActivity {
                                         pTimeField.getText().toString(),
                                         pItemsField.getText().toString(),
                                         pLocationField.getText().toString(),
-                                        itemDestinationField.getText().toString());
+                                        itemDestinationField.getText().toString(),
+                                        pStatus);
 
                 addLug(lugs);
 

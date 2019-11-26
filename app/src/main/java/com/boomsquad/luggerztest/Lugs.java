@@ -4,15 +4,18 @@ import android.widget.EditText;
 
 public class Lugs {
 
-    private String date, time, items, itemLocation, destination;
+    private String date, time, items, itemLocation, destination, status;
 
-    public Lugs(String date, String time, String items, String itemLocation, String destination) {
+    public Lugs(String date, String time, String items, String itemLocation, String destination, String status) {
         this.date = date;
         this.time = time;
         this.items = items;
         this.itemLocation = itemLocation;
         this.destination = destination;
+        this.status = status;
     }
+
+
 
     public Lugs() {
     }
@@ -35,6 +38,14 @@ public class Lugs {
 
     public String getDestination() {
         return destination;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public void setDate(String date) {
