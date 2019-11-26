@@ -35,11 +35,8 @@ import java.util.Map;
 public class CustomerHomeActivity extends AppCompatActivity {
 
     private EditText pDateField, pTimeField, pItemsField, pLocationField, itemDestinationField;
-    private String pDate, pTime, pItems, pLocation, itemDestination;
-    private String mService;
     private RadioGroup mRadioGroup;
 
-    private String requestService;
 
 
 
@@ -70,8 +67,6 @@ public class CustomerHomeActivity extends AppCompatActivity {
         userID = mAuth.getCurrentUser().getUid();
         historyDatabase = FirebaseDatabase.getInstance().getReference().child("history").child(userID);
 
-        getMoveInfo();
-
 
         pDateField = (EditText) findViewById(R.id.requestDate);
         pTimeField = (EditText) findViewById(R.id.requestTime);
@@ -86,106 +81,26 @@ public class CustomerHomeActivity extends AppCompatActivity {
         btnRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveUserInformation();
-//                final String date = pDateField.getText().toString();
-//                final String time = pTimeField.getText().toString();
-//                final String items = pItemsField.getText().toString();
-//                final String location = pLocationField.getText().toString();
-//                final String destination = itemDestinationField.getText().toString();
-//
-//                int selectId = mRadioGroup.getCheckedRadioButtonId();
-//
-//                final RadioButton radioButton = (RadioButton) findViewById(selectId);
-//
-//                if (radioButton.getText() == null){
-//                    return;
-//                }
-//
-//                requestService = radioButton.getText().toString();
+
+                Lugs lugs = new Lugs(pDateField.getText().toString(),
+                                        pTimeField.getText().toString(),
+                                        pItemsField.getText().toString(),
+                                        pLocationField.getText().toString(),
+                                        itemDestinationField.getText().toString());
+
+                addLug(lugs);
+
             }
         });
 
     }
 
-    private void getMoveInfo() {
-        historyDatabase.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists() && dataSnapshot.getChildrenCount()>0){
-                    Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
-                    if(map.get("pDate")!=null){
-//                        pDate = map.get("pDate").toString();
-                        pDateField.setText(pDate);
-                    }
-                    if(map.get("pTime")!=null){
-//                        pTime = map.get("pTime").toString();
-                        pTimeField.setText(pTime);
-                    }
-                    if(map.get("pItems")!=null){
-//                        pItems = map.get("pItems").toString();
-                        pItemsField.setText(pItems);
-                    }
-                    if(map.get("pLocation")!=null){
-//                        pLocation = map.get("pLocation").toString();
-                        pLocationField.setText(pItems);
-                    }
-                    if(map.get("pDestination")!=null){
-//                        itemDestination = map.get("pDestination").toString();
-                        itemDestinationField.setText(itemDestination);
-                    }
-                    if(map.get("service")!=null){
-                        mService = map.get("service").toString();
-                        switch (mService){
-                            case"UberX":
-                                mRadioGroup.check(R.id.UberX);
-                                break;
-                            case"UberBlack":
-                                mRadioGroup.check(R.id.UberBlack);
-                                break;
-                            case"UberXl":
-                                mRadioGroup.check(R.id.UberXl);
-                                break;
-                        }
-                    }
-                }
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+    private void addLug(Lugs lugs) {
+        FirebaseDatabase historyDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = historyDatabase.getReference("history").push();
 
-            }
-        });
-    }
-
-    private void saveUserInformation() {
-        pDate = pDateField.getText().toString();
-        pTime = pTimeField.getText().toString();
-        pItems = pItemsField.getText().toString();
-        pLocation = pLocationField.getText().toString();
-        itemDestination = itemDestinationField.getText().toString();
-
-
-        int selectId = mRadioGroup.getCheckedRadioButtonId();
-
-        final RadioButton radioButton = (RadioButton) findViewById(selectId);
-
-        if (radioButton.getText() == null){
-            return;
-        }
-
-        mService = radioButton.getText().toString();
-
-        Map userInfo = new HashMap();
-        userInfo.put("pDate", pDate);
-        userInfo.put("pTime", pTime);
-        userInfo.put("pItems", pItems);
-        userInfo.put("pLocation", pLocation);
-        userInfo.put("pDestination", itemDestination);
-
-
-        userInfo.put("service", mService);
-        historyDatabase.setValue(userInfo);
-
+        myRef.setValue(lugs);
 
 
     }
